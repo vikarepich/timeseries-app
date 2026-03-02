@@ -10,4 +10,7 @@ st.set_page_config(
 # Sample title and description
 st.title("📈 Time Series Forecasting App")
 st.write("Welcome to the Time Series Forecasting App.")
-st.info("I am saving my file here.")
+st.info("You can find my time series here.")
+st.info("Choose a date.")
+
+# add the rest
