@@ -287,6 +287,21 @@ with tab3:
         ax.legend()
         plt.tight_layout()
         show_fig(fig)
+        
+        # — Test Period Zoom —
+        st.subheader("Actual vs Predicted — Test Period (Jan 2014 onwards)")
+        
+        fig3, ax3 = plt.subplots(figsize=(14, 4))
+        ax3.plot(y_test.index, y_test.values,
+                label="Actual", linewidth=1.2, color="#54A24B")
+        ax3.plot(y_test.index, preds,
+                label="XGBoost Forecast", linewidth=1.5,
+                linestyle="--", color="#F58518")
+        ax3.set_title(f"Test Period: Actual vs Predicted — {target_col}")
+        ax3.set_ylabel(target_col)
+        ax3.legend()
+        plt.tight_layout()
+        show_fig(fig3)
 
 # ==========================================
 # TAB 4 — Error Analysis
